@@ -260,7 +260,7 @@
 
 	function gmake2.shellType()
 		_p('SHELLTYPE := posix')
-		_p('ifeq (.exe,$(findstring .exe,$(ComSpec)))')
+		_p('ifeq (cmd,$(findstring cmd,$(SHELL)))')
 		_p('\tSHELLTYPE := msdos')
 		_p('endif')
 		_p('')
